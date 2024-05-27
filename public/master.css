@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
+
+body {
+    margin: 10px;
+    padding: 0px;
+    text-align: center;
+    text-justify: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+    font-family: "Balsamiq Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.dark {
+    background-color: slategray;
+    color: black;
+}
+
+.light {
+    background-color: pink;
+    color: white;
+}
+
+h1 {
+    font-size: 4.5vw;
+    font-family: "Balsamiq Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: -15px;
+    margin-top: -5px;
+}
+
+h3 {
+    font-size: 1.5vw;
+    font-family: "Balsamiq Sans", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    margin-bottom: 15px;
+    margin-top: -2px;
+}
+
+table {
+    width: 85%;
+    text-align: center;
+    table-layout: fixed
+}
+
+th {
+    font-size: 3vw;
+    color: white;
+}
+
+td {
+    font-size: 1.5vw;
+    border-bottom: 1px solid whitesmoke;
+    text-decoration: none;
+}
+
+button, p {
+    margin: 0px;
+    font-size: 2vw;
+    font-family: "Balsamiq Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+    background-color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    height: fit-content;}
+
+input {
+    font-size: 2vw;
+    font-family: "Balsamiq Sans", sans-serif;
+    font-weight: 400;
+
+    text-align: center;
+    border: none;
+    background: none;
+    width: 5vw;
+}
+
+button:hover {
+    border: 2px solid black;
+    padding: 8px;
+}
+
+button:active {
+    background-color: black;
+    color: white;
+}
+
+.japanese {
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+#buttons {
+    position: sticky;
+    bottom: 15px;
+    display: inline-flex;
+    justify-content: center;
+    gap: 2.5px
+}
+
+.hideAll td {
+    color: transparent;
+    user-select: none;
+}
+
+.showAll td {
+    color: black;
+    text-decoration: underline;
+    user-select: all;
+}
+
+.show {
+    color: white !important;
+    text-decoration: none !important;
+    user-select: all;
+}
+
+.tableOptions {
+    display: flex;
+    gap: 10px;
+}
+
+@media print {
+    h1, h3, #buttons, .tableOptions {
+        visibility: hidden;
+    }
+
+    body {
+        margin: none;
+        margin-top: -50px;
+        color: black !important;
+        background-color: white !important;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    th {
+        font-size: 20px;
+        color: black;
+    }
+
+    .show {
+        color: black !important;
+        text-decoration: none !important;
+        user-select: all;
+    }
+
+    td {
+        font-size: 25px;
+        color: black;
+        border-bottom: 1px solid gray;
+    }
+ }
+
+@media only screen and (max-width:961px)  {
+    /* For mobile phones: */
+    #print {
+        visibility: hidden;
+        display: none;
+    }
+
+    h1 {
+        font-size: 10vw;
+    }
+
+    h3 {
+        font-size: 4vw;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    td {
+        font-size: 5.5vw;
+    }
+
+    th {
+        font-size: 4.5vw;
+    }
+
+    button, p, input {
+        font-size: 10vw;
+        padding: 10px;
+        margin: 5px
+    }
+
+    input {
+        width: 30vw;
+    }
+
+
+    .tableOptions {
+        display: block;
+    }
+  }
